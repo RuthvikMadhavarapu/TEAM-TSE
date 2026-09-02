@@ -1,0 +1,86 @@
+# TSE Learning Hub
+
+A collaborative website for Trainee Software Engineers (TSE) to introduce
+themselves, track their learning, and practice real Git/GitHub workflows —
+built as a static site.
+
+## What this is
+
+Every profile on the [Team](team.html) page is a real HTML/CSS page that
+member built and PR'd in themselves, reviewed by a teammate, and merged
+into `main`. There are no demo members and no shared "profile card"
+template controlling everyone's layout — each person's page is their own
+HTML and CSS, which is the point: it's a low-stakes place to practice and
+show front-end skills on something real. The Team page itself is just a
+lightweight directory that links out to each person's page.
+
+## Project structure
+
+```
+tse-learning-hub/
+├── index.html                    Home page
+├── about.html                     About page
+├── team.html                       Team directory (renders from team/members/)
+│
+├── css/
+│   └── style.css                    Site-wide styling (home/about/team)
+│
+├── js/
+│   ├── main.js                       Nav + shared behavior
+│   └── team.js                        Builds the directory grid
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+├── team/
+│   └── members/
+│       ├── index.json                 List of member folders to show
+│       └── _template/                  Copy this folder to add yourself
+│           ├── index.html               Your page — edit freely
+│           └── style.css                Your styles — edit freely
+│
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
+```
+
+### How the directory works
+
+`team.html` doesn't hardcode anyone's info. On load, `js/team.js`:
+
+1. Reads `team/members/index.json` for the list of member folder names.
+2. Fetches each member's own `index.html`.
+3. Reads four `<meta name="tse:*">` tags out of that page's `<head>`
+   (name, role, tagline, GitHub link) to build a small card.
+4. Links the card to that member's real page.
+
+Everything below the `<head>` of a member's page — every element, class,
+and style — is entirely up to them.
+
+## Running locally
+
+This is a static site with no build step, but the Team page fetches
+files, which most browsers block over `file://`. Serve the folder
+instead:
+
+```bash
+# from the project root
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
+
+Any static file server works — Python's is just built in on most machines.
+
+## How to contribute
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full fork → branch → PR →
+review → merge workflow, including how to add your own profile page.
+
+## Roadmap
+
+V1 ships Home, About, and a Team directory pointing at empty, member-owned
+HTML/CSS pages. Later versions are expected to let each member add
+courses, daily progress logs, goals, and projects to their own page —
+in whatever markup they choose, since there's no shared schema to
+outgrow.

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Team — TSE Learning Hub</title>
+<meta name="description" content="Meet the Trainee Software Engineers who've added their profile — or be the first." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="brand-mark"></span> TSE Learning Hub</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="team.html" aria-current="page">Team</a>
+    </nav>
+    <a class="nav-cta" href="https://github.com/" target="_blank" rel="noopener">
+      <span class="mono">GitHub</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="section section--ink" style="padding-bottom:2rem;">
+    <div class="wrap">
+      <p class="eyebrow">TEAM</p>
+      <h1 class="h-display h-2" style="max-width:18ch;">Meet the TSE team.</h1>
+      <p class="lede mt-lg">
+        A growing group of Trainee Software Engineers, learning, building,
+        and reviewing each other's work — one merged pull request at a
+        time.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="team-toolbar">
+        <p class="team-count mono" data-team-count>Loading members…</p>
+      </div>
+
+      <div class="team-grid" data-team-grid hidden></div>
+
+      <div class="empty-state" data-team-empty hidden>
+        <p class="eyebrow" style="color:var(--teal);">ADD YOUR PROFILES NEXT</p>
+        <h2 class="h-display h-3" style="max-width:20ch;">Be the Next TSE to add your profile.</h2>
+        <p class="lede" style="max-width:56ch;">
+          This page starts empty on purpose — no placeholder members, no
+          fake data. It fills in exactly as people open pull requests.
+        </p>
+        <pre><code><span class="c-comment"># 1. fork &amp; clone the repo, then:</span>
+git checkout -b feature/add-<span class="c-teal">your-name</span>-profile
+
+<span class="c-comment"># 2. copy the template — this becomes YOUR page</span>
+cp -r team/members/_template team/members/<span class="c-teal">your-name</span>
+
+<span class="c-comment"># 3. edit team/members/your-name/index.html and style.css</span>
+<span class="c-comment">#    however you like — this is real HTML/CSS practice</span>
+
+<span class="c-comment"># 4. add your folder name to team/members/index.json</span>
+
+<span class="c-comment"># 5. commit, push, and open a pull request</span>
+git add team/members/<span class="c-teal">your-name</span> team/members/index.json
+git commit -m <span class="c-gold">"Add your-name profile page"</span>
+git push origin feature/add-<span class="c-teal">your-name</span>-profile</code></pre>
+        <a class="btn btn-primary" href="https://github.com/" target="_blank" rel="noopener">Open a pull request</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span data-year></span> TSE Learning Hub — built by Trainee Software Engineers.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/team.js"></script>
+</body>
+</html>
