@@ -4,13 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Project</title>
+    <title>Landing Pages Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Betania+Patmos&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=stadia_controller" />
 </head>
 
 <body>
-    <h1>Landing Page Project</h1>
-    <p>This project page is available.</p>
-    <a href="../projects.html">Back to Projects</a>
+    <header class="header-bg">
+        <div class="flex-container">
+            <span class=" material-symbols-outlined font">
+                stadia_controller
+            </span>
+            <div class="header-container">
+                <a class="header-link"
+                    href="https://www.retrogames.cc/gameboyadvance-games/dragon-ball-z-supersonic-warriors-k-projectg.html#google_vignette"
+                    target="_blank">Retro
+                    Games</a>
+                <a class="header-link" href="https://www.ea.com/games/library/online" target="_blank">EA Games</a>
+                <a class="header-link" href="https://store.epicgames.com/collection/top-free-to-play"
+                    target="_blank">Epic Games</a>
+            </div>
+        </div>
+
+        <div class="hero-container">
+            <div class="sub-container1">
+                <h1 class="hero-main">PLAY. COMPETE. CONQUER.</h1>
+                <p class="hero-description">Discover new games, challenge your limits, and prove you have what it takes
+                    to become the ultimate gamer.</p>
+                <button class="hero-button">Explore</button>
+            </div>
+
+            <div class="sub-container2">
+                <img class="hero-img" src="./images/pc-image.jpg">
+            </div>
+        </div>
+        <a class="header-link" href="../projects.html">Back to Projects</a>
+    </header>
+    <div class="main-container">
+        <h1 class="main-heading">Most Played Right Now</h1>
+    </div>
+    <div class="image-container">
+        <div class="image-card">
+            <img class="main-image" src="./images/god_of_war.jpg" alt="god of war">
+            <p class="main-image-description">God Of War</p>
+        </div>
+        <div class="image-card">
+            <img class="main-image" src="./images/valorant.jpg" alt="valorant">
+            <p class="main-image-description">Valorant</p>
+        </div>
+        <div class="image-card">
+            <img class="main-image" src="./images/fortnite.jpg" alt="Fortnite">
+            <p class="main-image-description">Fortnite</p>
+        </div>
+        <div class="image-card">
+            <img class="main-image" src="./images/assassin's_creed.jpg" alt="Assassin's Creed Black Flag">
+            <p class="main-image-description">Assassin's Creed Blackflag</p>
+        </div>
+    </div>
+    <div class="main-quote-bg">
+        <div class="quote-container">
+            <p class="main-quote">
+                Get ready for an exciting gaming experience packed with fast-paced action, incredible adventures, and
+                competitive multiplayer gameplay. Whether you're exploring new worlds or battling with friends, there's
+                always a new challenge waiting.
+            </p>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="call-box">
+            <div class="call-container">
+                <div class="sub1">
+                    <p class="call-head">
+                        Discover More
+                    </p>
+                    <p class="call-sub">
+                        Sign up today and unlock a world of action, adventure, and multiplayer experiences.
+                    </p>
+                </div>
+                <div class="sub2">
+                    <button class="call-button">
+                        Sign-Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bg">
+        <div class="footer-container">
+            <p class="footer-text">Copyright
+                &copy; The Odin Project
+            </p>
+        </div>
+    </div>
 </body>
 
 </html>
