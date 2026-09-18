@@ -1,5 +1,44 @@
-.name-style{
-    font-family: "Betania Patmos", cursive;
-  font-weight: 400;
-  font-style: normal;
+body {
+    /* background-image: url("./images/portfolio-bg.jpg"); */
+    background: linear-gradient(80deg,  #656b7a, #2078ca,#530a69);
+    background-size: cover;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* header {
+    background-color: black;
+} */
+
+.header-container,
+.sub-container1,
+.sub-container2,
+.team-card,
+.main-container {
+    display: flex;
+}
+.main-container{
+    justify-content: center;
+}
+.header-container{
+   justify-content: space-between;
+   padding: 3px;
+   margin-top: 15px;
+}
+
+.sub-container2{
+    gap: 20px;
+}
+.header-link,.header-icon{
+    color:whitesmoke;
+    font-size: 21px;
+    text-decoration: none;
+}
+/* .header-icon{
+    color: white;
+    font-size: 10px;
+} */
+.header-link:hover,.team-card:hover,.header-icon:hover{
+
+    transform: scale(1.1);
 }
