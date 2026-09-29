@@ -94,6 +94,7 @@ body{
 .list-item:hover {
     background-color: grey;
     transition: 0.3s;
+    transform: translateY(-5px);
 }
 
 .header-link,
@@ -174,7 +175,7 @@ body{
 .about-para {
     color: whitesmoke;
     font-size: 18px;
-    font-family: "Merienda", cursive;
+    font-family: "Amethysta", serif;
 }
 
 .git-link,
