@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>TSE Learning Hub — Trainee Software Engineers</title>
 <meta name="description" content="A collaborative learning platform where Trainee Software Engineers build, ship, and grow together on GitHub." />
+<meta name="theme-color" content="#000000" />
+<link rel="icon" type="image/png" href="exaze-logo%20(1).png" />
+<link rel="apple-touch-icon" href="exaze-logo%20(1).png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -14,17 +17,21 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="brand"><span class="brand-mark"></span> TSE Learning Hub</a>
+    <a href="index.html" class="brand" aria-label="Exaze — TSE Learning Hub">
+      <img class="brand-logo" src="exaze-mark.png" alt="Exaze" width="625" height="721" />
+      <span class="brand-program">TSE Learning Hub</span>
+    </a>
     <nav class="nav-links" id="nav-links">
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
       <a href="team.html">Team</a>
-      <a href="quiz/">Courses</a>
+      <a href="courses/">Courses</a>
+      <a class="nav-mobile-github" href="https://github.com/jaswanth-exaze/TEAM-TSE" target="_blank" rel="noopener">GitHub</a>
     </nav>
     <a class="nav-cta" href="https://github.com/jaswanth-exaze/TEAM-TSE" target="_blank" rel="noopener">
       <span class="mono">GitHub</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -34,8 +41,17 @@
 
   <!-- HERO -->
   <section class="section section--ink hero">
+    <div class="exaze-ambient" aria-hidden="true">
+      <div class="exaze-ambient__light exaze-ambient__light--blue"></div>
+      <div class="exaze-ambient__light exaze-ambient__light--green"></div>
+      <div class="exaze-ambient__light exaze-ambient__light--red"></div>
+      <div class="exaze-ambient__particles">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
     <div class="wrap hero-grid">
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow hero-kicker">TRAINEE SOFTWARE ENGINEERS</p>
         <h1 class="h-display h-1">Learn. Build.<br />Ship. Together.</h1>
         <p class="lede">
@@ -46,55 +62,58 @@
         <div class="hero-actions">
           <a class="btn btn-primary" href="team.html">Meet the team</a>
           <a class="btn btn-ghost" href="about.html">What is TSE?</a>
-          <a class="btn btn-ghost" href="quiz/">Explore courses</a>
+          <a class="btn btn-ghost" href="courses/">Explore courses</a>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <p class="mono">Every PR is real</p>
-            <p>No demo commits — every merge updates the live site.</p>
-          </div>
-          <div class="hero-stat">
-            <p class="mono">Peer reviewed</p>
-            <p>A teammate reviews your branch before it ships.</p>
-          </div>
-          <div class="hero-stat">
-            <p class="mono">Starts at zero</p>
-            <p>No fake members. The team fills in as people join.</p>
+      </div>
+      <div class="hero-brand-visual" aria-hidden="true">
+        <div class="hero-logo-morph" data-logo-morph>
+          <svg class="hero-logo-morph__svg" id="s" viewBox="0 0 625 720" aria-label="Exaze logo morphing through T, S, and E">
+            <defs>
+              <linearGradient id="gb" gradientUnits="userSpaceOnUse" x1="360" y1="20" x2="40" y2="480"><stop offset="0" stop-color="#5BB5E8"/><stop offset=".45" stop-color="#2F7CC0"/><stop offset="1" stop-color="#2F4DA0"/></linearGradient>
+              <linearGradient id="gg" gradientUnits="userSpaceOnUse" x1="520" y1="240" x2="250" y2="660"><stop offset="0" stop-color="#EDEC80"/><stop offset=".4" stop-color="#5DB846"/><stop offset="1" stop-color="#235F33"/></linearGradient>
+              <clipPath id="db"><polygon points="410,-300 1400,-300 1400,1400 -300,1400 -300,410"/></clipPath>
+              <clipPath id="dg"><polygon points="700,-300 1400,-300 1400,1400 -300,1400 -300,700"/></clipPath>
+              <clipPath id="lb"><polygon points="-300,-300 410,-300 -300,410"/></clipPath>
+              <clipPath id="lg"><polygon points="-300,-300 700,-300 -300,700"/></clipPath>
+              <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#1b3b6b" flood-opacity=".3"/></filter>
+            </defs>
+            <g id="root"><g filter="url(#sh)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path id="b" d="M325 75C250 150 170 230 95 305C55 345 45 400 70 480" stroke="url(#gb)" stroke-width="118"/>
+              <path id="g" d="M445 285C385 345 300 420 255 465C195 525 215 620 300 655C360 675 410 650 450 610C490 570 520 530 550 490" stroke="url(#gg)" stroke-width="132"/>
+              <path id="m" d="M165 355C165 355 165 355 165 355" stroke="url(#gg)" stroke-width="0"/>
+              <g clip-path="url(#db)"><path id="b2" d="M325 75C250 150 170 230 95 305C55 345 45 400 70 480" stroke="#06143a" stroke-opacity=".16" stroke-width="118"/></g>
+              <g clip-path="url(#dg)"><path id="g2" d="M445 285C385 345 300 420 255 465C195 525 215 620 300 655C360 675 410 650 450 610C490 570 520 530 550 490" stroke="#031a0a" stroke-opacity=".2" stroke-width="132"/><path id="m2" d="M165 355C165 355 165 355 165 355" stroke="#031a0a" stroke-opacity=".2" stroke-width="0"/></g>
+              <g clip-path="url(#lb)"><path id="b3" d="M325 75C250 150 170 230 95 305C55 345 45 400 70 480" stroke="#fff" stroke-opacity=".14" stroke-width="118"/></g>
+              <g clip-path="url(#lg)"><path id="g3" d="M445 285C385 345 300 420 255 465C195 525 215 620 300 655C360 675 410 650 450 610C490 570 520 530 550 490" stroke="#fff" stroke-opacity=".16" stroke-width="132"/><path id="m3" d="M165 355C165 355 165 355 165 355" stroke="#fff" stroke-opacity=".16" stroke-width="0"/></g>
+            </g></g>
+          </svg>
+          <div class="hero-logo-morph__wordmark" data-wordmark></div>
+          <div class="hero-logo-morph__meanings" data-meanings>
+            <span class="hero-logo-morph__meaning" data-morph-letter="T"><b>T</b><small>Trainee</small></span>
+            <span class="hero-logo-morph__meaning" data-morph-letter="S"><b>S</b><small>Software</small></span>
+            <span class="hero-logo-morph__meaning" data-morph-letter="E"><b>E</b><small>Engineer</small></span>
           </div>
         </div>
       </div>
-
-      <div aria-hidden="true">
-        <svg class="git-graph" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
-          <!-- main line -->
-          <path class="line-main draw" style="animation-delay:0.1s" d="M20,220 L500,220" />
-          <!-- feature branch: splits, two commits, merges back -->
-          <path class="line-feature draw" style="animation-delay:0.5s"
-                d="M150,220 C185,220 185,100 220,100 L300,100 C335,100 335,220 370,220" />
-
-          <!-- main commits -->
-          <circle class="dot-main pop" style="animation-delay:0s" cx="20" cy="220" r="6" />
-          <circle class="dot-main pop" style="animation-delay:1.1s" cx="150" cy="220" r="6" />
-          <circle class="dot-merge pop" style="animation-delay:1.9s" cx="370" cy="220" r="7" />
-          <circle class="dot-main pop" style="animation-delay:2.1s" cx="500" cy="220" r="6" />
-
-          <!-- feature commits -->
-          <circle class="dot-feature pop" style="animation-delay:1.3s" cx="220" cy="100" r="6" />
-          <circle class="dot-feature pop" style="animation-delay:1.55s" cx="300" cy="100" r="6" />
-
-          <!-- labels -->
-          <text x="20" y="245" style="animation-delay:0s" class="pop">main</text>
-          <text x="150" y="245" class="pop" style="animation-delay:1.1s">branch</text>
-          <text x="196" y="82" class="pop" style="animation-delay:1.3s">add-profile</text>
-          <text x="330" y="245" class="pop" style="animation-delay:1.9s">merge</text>
-          <text x="465" y="245" class="pop" style="animation-delay:2.1s">deploy</text>
-        </svg>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <p class="mono">Every PR is real</p>
+          <p>No demo commits — every merge updates the live site.</p>
+        </div>
+        <div class="hero-stat">
+          <p class="mono">Peer reviewed</p>
+          <p>A teammate reviews your branch before it ships.</p>
+        </div>
+        <div class="hero-stat">
+          <p class="mono">Starts at zero</p>
+          <p>No fake members. The team fills in as people join.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PIPELINE -->
-  <section class="section section--ink" style="padding-top:0;">
+  <section class="section section--ink pipeline-section">
     <div class="wrap">
       <p class="eyebrow">HOW WORK MOVES THROUGH THIS REPO</p>
       <div class="pipeline">
@@ -112,7 +131,7 @@
 
   <!-- WHAT THIS IS -->
   <section class="section section--paper">
-    <div class="wrap split">
+    <div class="wrap split split--overview">
       <div>
         <p class="eyebrow" style="color:var(--teal);">WHAT THIS PLACE IS</p>
         <h2 class="h-display h-3">A codebase you learn by shipping to.</h2>
@@ -147,14 +166,14 @@
   </section>
 
   <!-- CTA -->
-  <section class="section section--paper" style="padding-top:0;">
+  <section class="section section--paper">
     <div class="wrap">
       <div class="cta-banner">
         <div>
           <h3 class="h-display h-4">Ready to add yourself?</h3>
           <p class="lede" style="margin-top:0.5rem;">Fork the repo, copy the profile template, open a PR.</p>
         </div>
-        <a class="btn btn-primary" style="background:var(--ink);color:var(--paper-text);" href="team.html">See how it works →</a>
+        <a class="btn btn-primary btn-primary--dark" href="team.html">See how it works →</a>
       </div>
     </div>
   </section>
@@ -167,12 +186,13 @@
     <div class="footer-links">
       <a href="about.html">About</a>
       <a href="team.html">Team</a>
-      <a href="quiz/">Courses</a>
+      <a href="courses/">Courses</a>
       <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
+<script type="module" src="js/logo-morph.js"></script>
 </body>
 </html>
